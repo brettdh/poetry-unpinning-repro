@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install Poetry
-        run: |
-          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-          source $HOME/.poetry/env
+        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+      - name: Set up poetry path
+        run: . $HOME/.poetry/env
       - name: Install deps with poetry
         run: poetry install
