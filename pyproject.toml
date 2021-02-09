@@ -4,12 +4,18 @@ version = "0.1.0"
 description = ""
 authors = ["Brett Higgins <brett.higgins@gmail.com>"]
 license = "MIT"
+packages = [
+  { include = "main" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.6"
 click = "^7.1.2"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+main = "main:main"
 
 [build-system]
 requires = ["poetry>=0.12"]
